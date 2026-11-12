@@ -114,6 +114,13 @@ Optional bei allen: `label` überschreibt den automatischen Text, z. B. `"label"
 ```
 Die App sagt während der Runde zufällig eins der Kommandos an (Stimme oder Signalton) und zeigt es groß an.
 `pace` ist der Abstand zwischen zwei Kommandos: `ruhig` 8–15 s, `mittel` 5–10 s, `schnell` 3–6 s. Im Timer kann man den Takt jederzeit selbst umstellen.
+**Aussprache:** Die Stimme ist deutsch, englische Begriffe klingen sonst schief. Oben in `roadmap.json` steht deshalb `"aussprache"`: links das Wort, wie es angezeigt wird, rechts, wie die Stimme es sagen soll.
+
+```json
+"aussprache": { "Step Back": "Stepp Bäck", "Jab": "Dschäbb", "Smother": "Smasser" }
+```
+Klingt ein Wort noch komisch: rechts anders schreiben, hochladen, im Timer auf das Kommando-Feld tippen und probehören. Die Anzeige im Timer bleibt immer das Original.
+
 Tipp: Schreib Kommandos so, wie man sie laut sagt, z. B. `"Step Back, Eins Zwei"`. Die Kommas machen kleine Sprechpausen.
 
 Gut zu wissen: Zwischen zwei Übungen auf Zeit ohne eigene Pause legt der Timer 15 s Wechselzeit ein. Vor der ersten Runde gibt es 10 s zum Fertigmachen.

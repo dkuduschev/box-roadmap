@@ -17,6 +17,29 @@
     "Serie": "Mehrteilige Serie"
   },
   "levels": ["Neu für mich", "Kenn ich, klappt selten", "Klappt im Training", "Klappt im Sparring", "Klappt im Kampf"],
+  "aussprache": {
+    "Step Back": "Stepp Bäck",
+    "Half Step": "Haaf Stepp",
+    "Shoulder Bump": "Scholder Bamp",
+    "Shoulder Roll": "Scholder Rohl",
+    "Check Hook": "Tschäck Huck",
+    "Power Jab": "Pauer Dschäbb",
+    "Jab": "Dschäbb",
+    "Jabs": "Dschäbbs",
+    "Slip": "Slipp",
+    "Dip": "Dipp",
+    "Roll": "Rohl",
+    "Pull": "Pull",
+    "Smother": "Smasser",
+    "Push": "Pusch",
+    "Parry": "Pärri",
+    "Catch": "Kätsch",
+    "Hook": "Huck",
+    "Uppercut": "Apperkatt",
+    "Touch": "Tatsch",
+    "Pivot": "Piwott",
+    "Clinch": "Klinsch"
+  },
   "topics": [
     {
       "id": "stand",
