@@ -37,7 +37,7 @@
 .t-opts .chip{font-size:12px;padding:5px 10px}
 .t-opts .chip[aria-pressed="true"]::before{content:"✓ "}
 .t-tip{font-size:12px;color:var(--muted);text-align:center;margin:0}
-.t-cmd{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,9vw,48px);line-height:1.05;text-align:center;text-transform:uppercase;letter-spacing:.02em;color:var(--phase);min-height:1.1em;padding:6px 8px;border:2px solid var(--phase);border-radius:12px;opacity:.55;transition:opacity .4s,transform .2s}
+.t-cmd{display:block;width:100%;background:none;cursor:pointer;font-family:var(--f-display);font-weight:800;font-size:clamp(30px,9vw,48px);line-height:1.05;text-align:center;text-transform:uppercase;letter-spacing:.02em;color:var(--phase);min-height:1.1em;padding:6px 8px;border:2px solid var(--phase);border-radius:12px;opacity:.55;transition:opacity .4s,transform .2s}
 .t-cmd.idle{font-family:var(--f-body);font-size:14px;font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted);border-style:dashed;border-color:var(--line);opacity:1}
 .t-cmd.on{opacity:1;transform:scale(1.04);background:var(--surface-2)}
 .t-pace{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;align-items:center}

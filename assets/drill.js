@@ -68,11 +68,18 @@
   }
   if (synth) { pickVoice(); synth.addEventListener?.("voiceschanged", pickVoice); }
   const canSpeak = () => !!synth && opt.voice && opt.sound;
+  // Englische Begriffe so schreiben, wie eine deutsche Stimme sie richtig ausspricht (Liste in roadmap.json → "aussprache")
+  let lex = [];
+  function setLex(map) {
+    lex = Object.entries(map || {}).sort((a, b) => b[0].length - a[0].length)
+      .map(([k, v]) => [new RegExp("(^|[^\\p{L}])" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "[\\s-]+") + "(?=$|[^\\p{L}])", "giu"), v]);
+  }
+  const spoken = (t) => lex.reduce((a, [re, v]) => a.replace(re, (m, pre) => pre + v), String(t));
   function say(text, silent) {
     if (!synth) return;
     try {
       synth.cancel();
-      const u = new SpeechSynthesisUtterance(text);
+      const u = new SpeechSynthesisUtterance(silent ? text : spoken(text));
       u.lang = "de-DE"; if (deVoice) u.voice = deVoice;
       u.rate = 1.1; u.volume = silent ? 0 : 1;
       synth.speak(u);
@@ -176,13 +183,15 @@
     vib(90);
     showCmd(w, true);
   }
+  // In der Vorbereitung schon die Kommandos der ersten Runde zeigen
+  const cmdSeg = () => (cur() && cur().type === "prep" ? segs[T.i + 1] : cur());
   function showCmd(w, fresh) {
     const el = $("tcmd");
     if (!el) return;
-    const s = cur();
+    const s = cmdSeg();
     el.hidden = !(s && s.type === "work" && s.cmd && opt.react);
     if (el.hidden) return;
-    el.textContent = w || "Kommandos: " + s.cmd.join(" · ");
+    el.textContent = w || "Kommandos: " + s.cmd.join(" · ") + (synth ? " · antippen zum Anhören" : "");
     el.classList.toggle("idle", !w);
     if (fresh) {
       el.classList.remove("on"); void el.offsetWidth; el.classList.add("on");
@@ -317,7 +326,7 @@
       <section class="timer" id="timer" aria-label="Rundentimer">
         <div class="t-top"><span class="t-phase" id="tphase"></span><span class="t-pos" id="tpos"></span></div>
         <div><div class="t-ex" id="tex"></div><p class="t-note" id="tnote"></p></div>
-        <div class="t-cmd" id="tcmd" aria-live="assertive" hidden></div>
+        <button class="t-cmd" id="tcmd" type="button" aria-live="assertive" hidden></button>
         <div class="t-clock" id="tclock" role="timer" aria-live="off"></div>
         <div class="t-bar"><i id="tbar"></i></div>
         <div class="t-next" id="tnext" aria-live="polite"></div>
@@ -364,6 +373,12 @@
     const b = e.target.closest("button");
     if (!b) return;
     if (b.id === "tmain") mainAction();
+    else if (b.id === "tcmd") {
+      const s = cmdSeg();
+      if (!s || !s.cmd || !synth) return;
+      if (T.lastCmd && T.running) say(T.lastCmd);
+      else say(s.cmd.join(". "));
+    }
     else if (b.id === "tprev") go(-1);
     else if (b.id === "tnextb") go(1);
     else if (b.id === "print") window.print();
@@ -391,7 +406,7 @@
   window.addEventListener("hashchange", load);
 
   (async function init() {
-    try { D = await Core.loadData(); }
+    try { D = await Core.loadData(); setLex(D.aussprache); }
     catch (err) { $("app").innerHTML = `<div class="empty">Daten nicht gefunden: ${esc(err.message)}</div>`; return; }
     load();
     const q = new URLSearchParams(location.search);
