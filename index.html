@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daniels Box-Roadmap</title>
+<meta name="description" content="Vom Anfänger zum Boxer: Trainingskarte, Drillpläne und Content-Plan.">
+<meta name="theme-color" content="#ECEEF2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Trainings- &amp; Contentkarte</div>
+      <h1>Vom Anfänger <span>zum Boxer</span></h1>
+      <p>Alles, was im Amateurboxen zählt, auf einer Seite. Jedes Thema führt zu einem Drillplan und zu Video-Ideen für den Kanal.</p>
+    </div>
+    <div class="top-right">
+      <div class="stats" id="stats"></div>
+      <button class="syncbtn" id="syncbtn" data-state="local" title="Speichern einrichten"><i></i><span>Nur auf diesem Gerät</span></button>
+    </div>
+  </header>
+
+  <section class="finder" aria-labelledby="fh">
+    <div class="finder-row">
+      <h2 id="fh">Woran hapert's gerade?</h2>
+      <label class="search" for="q">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Thema oder Problem suchen, z. B. Kopf, Luft, Ecke" autocomplete="off">
+      </label>
+    </div>
+    <div class="fsec" id="weakest"></div>
+    <div class="fsec">
+      <div class="fsec-h"><b>Was ist dir im Sparring oder Training aufgefallen?</b><span class="hint">Mehrere antippen geht.</span></div>
+      <div class="chips" id="symptoms" role="group" aria-label="Typische Probleme"></div>
+    </div>
+    <div class="reco" id="reco" hidden></div>
+  </section>
+
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Ansicht">
+      <button id="v-map" aria-pressed="true">Roadmap</button>
+      <button id="v-content" aria-pressed="false">Content-Plan</button>
+    </div>
+    <div class="legend" id="legend">
+      <span><span class="lvl" style="--pc:var(--muted)"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span> Dein Stand 1–5</span>
+      <span><span class="vcount"><svg viewBox="0 0 10 10"><path d="M1 0l9 5-9 5z"/></svg>3</span> Video-Ideen</span>
+    </div>
+  </div>
+
+  <main id="map" class="map" aria-label="Roadmap"><div class="loading">Lade Roadmap …</div></main>
+  <main id="content" class="content" hidden></main>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="panel" id="panel" hidden aria-modal="true" role="dialog" aria-labelledby="ptitle">
+  <div class="panel-head">
+    <div class="ttl">
+      <div class="crumb" id="pcrumb"></div>
+      <h2 id="ptitle"></h2>
+    </div>
+    <button class="x" id="pclose" aria-label="Schließen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="panel-body" id="pbody"></div>
+</aside>
+
+<dialog id="syncdlg" aria-labelledby="sdh">
+  <form method="dialog" class="dlg" id="syncform">
+    <h2 id="sdh">Speichern</h2>
+    <p>Status, Notizen und deine Einschätzungen landen in <code>data/progress.json</code> in deinem GitHub-Repo. So hast du auf Handy und Laptop denselben Stand. Kostet nichts.</p>
+    <ol>
+      <li>Auf GitHub: Settings → Developer settings → Fine-grained tokens → <b>Generate new token</b>.</li>
+      <li>Nur dieses Repo auswählen, Berechtigung <b>Contents: Read and write</b>.</li>
+      <li>Token hier einfügen. Er bleibt nur in diesem Browser gespeichert.</li>
+    </ol>
+    <div class="grid2">
+      <label class="field">GitHub-Name<input name="owner" autocomplete="off" required></label>
+      <label class="field">Repo<input name="repo" autocomplete="off" required></label>
+      <label class="field">Branch<input name="branch" autocomplete="off" value="main"></label>
+      <label class="field">Datei<input name="path" autocomplete="off" value="data/progress.json"></label>
+    </div>
+    <label class="field">Token<input name="token" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+    <div class="msg" id="syncmsg" role="status"></div>
+    <div class="row">
+      <button class="btn primary" value="connect" id="sconnect">Verbinden &amp; speichern</button>
+      <button class="btn" value="disconnect" id="sdisconnect" type="button">Trennen</button>
+      <button class="btn" value="cancel" formnovalidate>Schließen</button>
+    </div>
+    <hr>
+    <p>Backup ohne GitHub: Fortschritt als Datei sichern oder auf ein anderes Gerät übertragen.</p>
+    <div class="row">
+      <button class="btn small" type="button" id="sexport">progress.json herunterladen</button>
+      <label class="btn small" for="simport">Datei laden …</label>
+      <input type="file" id="simport" accept="application/json,.json" hidden>
+    </div>
+  </form>
+</dialog>
+
+<script src="assets/core.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

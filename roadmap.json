@@ -1,0 +1,728 @@
+{
+  "pillars": [
+    { "id": "technik", "name": "Technik", "sub": "Was du im Ring machst" },
+    { "id": "kraft", "name": "Kraft", "sub": "Punch und Stabilität" },
+    { "id": "ausdauer", "name": "Ausdauer", "sub": "Drei Runden Vollgas" },
+    { "id": "mental", "name": "Mentalität", "sub": "Kopf und Nerven" },
+    { "id": "regen", "name": "Regeneration", "sub": "Schlaf, Essen, Gewicht" }
+  ],
+  "stages": [
+    { "n": 1, "name": "Grundlagen", "sub": "Die ersten 3–6 Monate" },
+    { "n": 2, "name": "Aufbau", "sub": "Erste Sparrings" },
+    { "n": 3, "name": "Wettkampf", "sub": "Kampfreif im Amateurring" }
+  ],
+  "formats": {
+    "Short": "Reel / Short, unter 60 s",
+    "Video": "YouTube, 8–15 min",
+    "Serie": "Mehrteilige Serie"
+  },
+  "levels": [
+    "Neu für mich",
+    "Kenn ich, klappt selten",
+    "Klappt im Training",
+    "Klappt im Sparring",
+    "Klappt im Kampf"
+  ],
+  "topics": [
+    {
+      "id": "stand", "pillar": "technik", "stage": 1, "title": "Stand & Deckung",
+      "desc": "Die Basis für alles: Füße schulterbreit, Gewicht auf den Fußballen, Kinn unten, Hände an den Wangen.",
+      "keys": ["Hinterer Fuß leicht ausgedreht, Ferse locker", "Kinn runter, vordere Schulter schützt das Kinn", "Ellbogen eng am Körper"],
+      "signs": ["Du verlierst nach Schlägen das Gleichgewicht", "Die Deckung fällt runter, wenn du müde wirst"],
+      "videos": [
+        { "id": "stand-0", "title": "Die 5 häufigsten Fehler im Boxstand", "format": "Short", "hook": "Wenn deine Hände nach drei Schlägen unten sind, liegt's nicht an den Armen, sondern an deinem Stand." },
+        { "id": "stand-1", "title": "Boxstand komplett erklärt für Anfänger", "format": "Video", "hook": "Bevor du einen einzigen Schlag lernst, muss das hier sitzen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Ein Stand, der nach jedem Schlag und jedem Schritt wieder sitzt",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 30 Min.",
+        "exercises": [
+          { "name": "Stand-Check vor dem Spiegel", "rounds": 2, "work": 120, "rest": 30, "note": "Stand einnehmen, 10 s halten, lösen, neu einnehmen. Jedes Mal checken: Kinn, Ellbogen, Füße." },
+          { "name": "Stand unter Druck", "rounds": 3, "work": 60, "rest": 30, "note": "Partner drückt leicht gegen Schultern und Hüfte, aus allen Richtungen. Du bleibst stabil, die Deckung bleibt zu." },
+          { "name": "Schattenboxen mit Freeze", "rounds": 3, "work": 120, "rest": 60, "note": "Partner ruft „Stopp“, du frierst sofort ein. Sitzt der Stand noch? Sind die Hände oben?" },
+          { "name": "Sandsack: Kombi und zurück in den Stand", "rounds": 3, "work": 180, "rest": 60, "note": "Nach jeder Kombi bewusst zurück in den Grundstand, erst dann kommt die nächste." }
+        ],
+        "check": "Nach 3 Minuten am Sack filmen, von vorne und von der Seite: Sind die Hände noch an den Wangen, ist das Kinn unten?"
+      }
+    },
+    {
+      "id": "beinarbeit", "pillar": "technik", "stage": 1, "title": "Beinarbeit Basics",
+      "desc": "Bewegen, ohne die Füße zu kreuzen: Step-Drag vor, zurück, seitlich und Pivot.",
+      "keys": ["Der Fuß in Bewegungsrichtung geht zuerst", "Nie die Füße kreuzen oder zusammenführen", "Kleine Schritte, Stand bleibt gleich breit"],
+      "signs": ["Du landest oft in der Ecke oder an den Seilen", "Nach Schritten stehst du zu breit oder zu eng"],
+      "videos": [
+        { "id": "beinarbeit-0", "title": "Beinarbeit-Drill mit nur einer Koordinationsleiter", "format": "Short", "hook": "Du brauchst kein Gym für bessere Beinarbeit, nur diese Leiter und zehn Minuten." },
+        { "id": "beinarbeit-1", "title": "So bewege ich mich im Ring: Beinarbeit aus 40 Kämpfen", "format": "Video", "hook": "Nach 40 Kämpfen weiß ich: Kämpfe werden mit den Füßen gewonnen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Sauber bewegen, ohne die Füße zu kreuzen und ohne in die Ecke zu geraten",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 25 Min.",
+        "exercises": [
+          { "name": "Koordinationsleiter", "rounds": 4, "reps": "1 Durchgang", "rest": 30, "label": "4 Durchgänge", "note": "Step-Drag vor, zurück, seitlich, immer in Boxstellung." },
+          { "name": "Box-Viereck", "rounds": 3, "work": 120, "rest": 30, "note": "Ein Viereck auf den Boden kleben: vor, seitlich, zurück, Pivot. Hände oben." },
+          { "name": "Partner spiegeln", "rounds": 3, "work": 60, "rest": 30, "note": "Partner bewegt sich frei, du hältst immer dieselbe Distanz." },
+          { "name": "Sandsack mit Winkel", "rounds": 3, "work": 180, "rest": 60, "note": "Kombination schlagen, dann per Pivot oder Seitschritt raus aus der Linie." }
+        ],
+        "check": "Strichliste im Sparring: Wie oft landest du pro Runde an den Seilen?"
+      }
+    },
+    {
+      "id": "jab", "pillar": "technik", "stage": 1, "title": "Jab",
+      "desc": "Der wichtigste Schlag: misst die Distanz, punktet und öffnet jede Kombination.",
+      "keys": ["Gerade raus, gerade zurück zur Wange", "Faust dreht am Ende ein", "Mit einem kleinen Schritt verbinden"],
+      "signs": ["Dein Jab wird gekontert", "Der Gegner kommt ohne Mühe in deine Distanz"],
+      "videos": [
+        { "id": "jab-0", "title": "Jab: 3 Varianten, die ich im Kampf nutze", "format": "Video", "hook": "Ein Jab ist nicht einfach ein Jab. Ich nutze im Kampf drei verschiedene." },
+        { "id": "jab-1", "title": "Der Jab-Fehler, den fast jeder Anfänger macht", "format": "Short", "hook": "Fast jeder Anfänger macht diesen Fehler beim Jab, und er kostet dich jedes Mal einen Treffer." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Ein schneller, harter Jab, der die Distanz kontrolliert",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 35 Min.",
+        "exercises": [
+          { "name": "Schattenboxen nur Jab", "rounds": 3, "work": 120, "rest": 30, "note": "Jab, Doppeljab, Jab zum Körper, Jab im Rückwärtsgehen." },
+          { "name": "Sandsack: Jab mit Schritt", "rounds": 3, "work": 180, "rest": 60, "note": "Mit jedem Jab einen kleinen Schritt, Tempo und Rhythmus wechseln." },
+          { "name": "Reaktions-Pratzen", "rounds": 3, "work": 120, "rest": 30, "note": "Trainer zeigt die Pratze kurz, du jabst sofort. Schnell zurück zur Wange." },
+          { "name": "Sparring nur mit Jab", "rounds": 2, "work": 180, "rest": 60, "note": "Du darfst nur jabben. Ziel: den Partner auf Distanz halten." }
+        ],
+        "check": "Schaffst du eine ganze Runde, den Gegner nur mit dem Jab auf Distanz zu halten?"
+      }
+    },
+    {
+      "id": "cross", "pillar": "technik", "stage": 1, "title": "Gerade Rechte",
+      "desc": "Der Power-Schlag aus der hinteren Hand. Die Kraft kommt aus Bein und Hüfte, nicht aus dem Arm.",
+      "keys": ["Hinteren Fuß eindrehen", "Hüfte und Schulter rotieren mit", "Vordere Hand bleibt oben"],
+      "signs": ["Deine Rechte hat keinen Druck", "Nach der Rechten wirst du getroffen"],
+      "videos": [
+        { "id": "cross-0", "title": "Mehr Power in der Rechten: Kraft von unten", "format": "Short", "hook": "Deine Rechte ist schwach, weil du nur mit dem Arm schlägst." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Eine Rechte, die vom Boden kommt und sicher zurückkehrt",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 30 Min.",
+        "exercises": [
+          { "name": "Hüftdreh ohne Schlag", "rounds": 2, "work": 60, "rest": 30, "note": "Hände auf die Hüfte, hinteren Fuß eindrehen, Hüfte rotiert. Erst die Bewegung, dann kommt der Arm dazu." },
+          { "name": "Schatten 1-2 im halben Tempo", "rounds": 2, "work": 120, "rest": 60, "note": "Fokus: Die vordere Hand bleibt an der Wange, das Kinn hinter der Schulter." },
+          { "name": "Sandsack: Power-Rechte", "rounds": 3, "work": 180, "rest": 60, "note": "Jab zum Messen, Rechte mit voller Rotation. Nach jeder Rechten sofort zurück in die Deckung." },
+          { "name": "Pratzen mit Antwort", "rounds": 3, "work": 120, "rest": 60, "note": "Nach deiner Rechten schlägt der Trainer einen Haken zurück. Du blockst oder tauchst ab." }
+        ],
+        "check": "Video von der Seite: Dreht der hintere Fuß ein? Ist die linke Hand beim Treffer noch oben?"
+      }
+    },
+    {
+      "id": "haken", "pillar": "technik", "stage": 2, "title": "Haken & Aufwärtshaken",
+      "desc": "Kurze Schläge für die Halbdistanz, zum Kopf und zum Körper.",
+      "keys": ["Ellbogen auf Fausthöhe beim Haken", "Rotation über den vorderen Fuß", "Körperhaken: in die Knie gehen statt runterbeugen"],
+      "signs": ["Deine Haken sind weit ausgeholt", "Du triffst nie zum Körper"],
+      "videos": [
+        { "id": "haken-0", "title": "Leberhaken richtig schlagen", "format": "Video", "hook": "Ein sauberer Leberhaken beendet Kämpfe. So triffst du ihn." },
+        { "id": "haken-1", "title": "Haken oder Schwinger? Der Unterschied", "format": "Short", "hook": "Zehn Zentimeter entscheiden, ob du triffst oder getroffen wirst." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Kurze, kompakte Haken zu Kopf und Körper aus der Halbdistanz",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 30 Min.",
+        "exercises": [
+          { "name": "Schatten: nur Haken", "rounds": 2, "work": 120, "rest": 30, "note": "Haken und Aufwärtshaken im halben Tempo. Ellbogen auf Fausthöhe, Rotation über den vorderen Fuß." },
+          { "name": "Sandsack: Körper, dann Kopf", "rounds": 3, "work": 180, "rest": 60, "note": "Leberhaken, dann Haken zum Kopf. Für den Körper in die Knie gehen, nicht nach vorne beugen." },
+          { "name": "Pratzen in der Halbdistanz", "rounds": 3, "work": 120, "rest": 60, "note": "Trainer hält eng, du schlägst kurze Serien: 3-2-3, 6-5-6. Nach jeder Serie den Kopf bewegen." },
+          { "name": "Wand-Drill", "rounds": 2, "work": 60, "rest": 30, "note": "Dicht neben einer Wand stehen. Wer ausholt, schlägt an. Zwingt dich, kurz zu bleiben." }
+        ],
+        "check": "Video von vorne: Bleibt der Ellbogen eng? Ziel: Kein Haken holt sichtbar aus."
+      }
+    },
+    {
+      "id": "kombi", "pillar": "technik", "stage": 2, "title": "Kombinationen",
+      "desc": "Schläge verbinden statt Einzeltreffer: 1-2, 1-2-3, 1-1-2, Körper-Kopf.",
+      "keys": ["Jeder Schlag bereitet den nächsten vor", "Nach der Kombi raus aus der Linie", "Ebenen wechseln: Kopf, Körper, Kopf"],
+      "signs": ["Du schlägst nur Einzelschläge", "Nach einer Kombi bleibst du stehen und kassierst"],
+      "videos": [
+        { "id": "kombi-0", "title": "5 Kombinationen, die in jedem Amateurkampf funktionieren", "format": "Video", "hook": "Diese fünf Kombinationen funktionieren gegen fast jeden Amateurgegner." },
+        { "id": "kombi-1", "title": "Kombi der Woche", "format": "Serie", "hook": "Neue Woche, neue Kombi: Schlag sie heute hundertmal, dann gehört sie dir." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Kombinationen flüssig schlagen und danach raus aus der Linie",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 40 Min.",
+        "exercises": [
+          { "name": "Kombi-Leiter im Schatten", "rounds": 3, "work": 120, "rest": 30, "note": "1, dann 1-2, dann 1-2-3, dann 1-2-3-2. Jede Stufe 30 s, erst sauber, dann schnell." },
+          { "name": "Sandsack: Kombi plus Winkel", "rounds": 3, "work": 180, "rest": 60, "note": "Jede Kombi endet mit Pivot oder Seitschritt. Niemals stehen bleiben." },
+          { "name": "Pratzen nach Zahlen", "rounds": 3, "work": 180, "rest": 60, "note": "Trainer ruft Zahlen, du schlägst sofort. Ebenen wechseln: Körper, Kopf." },
+          { "name": "Bedingtes Sparring", "rounds": 2, "work": 180, "rest": 60, "note": "Nur Angriffe ab drei Schlägen zählen. Einzelschläge sind verboten." }
+        ],
+        "check": "Im Sparring zählen: Wie viele deiner Angriffe haben drei oder mehr Schläge? Ziel: mehr als die Hälfte."
+      }
+    },
+    {
+      "id": "headmovement", "pillar": "technik", "stage": 2, "title": "Head Movement",
+      "desc": "Den Kopf aus der Schlaglinie nehmen: Slip, Abtauchen, Pull. Macht dich schwer zu treffen und öffnet Konter.",
+      "keys": ["Bewegung aus Knien und Hüfte, nicht nur aus dem Nacken", "Klein bleiben: knapp vorbei reicht", "Nach jeder Ausweichbewegung direkt kontern"],
+      "signs": ["Du wirst im Sparring oft am Kopf getroffen", "Du stehst gerade und starr vor dem Gegner", "Du bewegst den Kopf erst, wenn der Schlag schon da ist"],
+      "videos": [
+        { "id": "headmovement-0", "title": "Head Movement für Anfänger: Slip, Abtauchen, Pull", "format": "Video", "hook": "Wenn du ständig am Kopf getroffen wirst, fehlt dir eine Sache: Bewegung aus den Knien." },
+        { "id": "headmovement-1", "title": "Schnurdrill zu Hause in 5 Minuten", "format": "Short", "hook": "Eine Schnur, zwei Stühle, fünf Minuten. Mehr brauchst du für besseres Head Movement nicht." },
+        { "id": "headmovement-2", "title": "Sparring-Analyse: wo mein Head Movement versagt", "format": "Video", "hook": "Ich habe mein Sparring gefilmt, und mein Head Movement war schlechter als gedacht." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Den Kopf automatisch aus der Linie nehmen und direkt kontern",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 45 Min.",
+        "exercises": [
+          { "name": "Schnurdrill", "rounds": 3, "work": 180, "rest": 60, "note": "Unter einer gespannten Schnur abtauchen, dabei vor und zurück gehen. Knie beugen, nicht den Rücken." },
+          { "name": "Spiegel-Slips", "rounds": 2, "work": 120, "rest": 30, "note": "Jab und Cross schlagen, danach nach außen slippen. Der Kopf landet außerhalb der Schulterlinie." },
+          { "name": "Maisbirne / Tennisball am Faden", "rounds": 2, "work": 180, "rest": 60, "note": "Rhythmus finden, nach jedem Ausweichen sofort schlagen." },
+          { "name": "Pratzen mit Konter", "rounds": 3, "work": 180, "rest": 60, "note": "Der Trainer schlägt mit der Pratze zurück, du slipst oder tauchst ab und konterst mit 2–3 Schlägen." },
+          { "name": "Bedingtes Sparring", "rounds": 2, "work": 180, "rest": 60, "note": "Partner schlägt nur Jab und Cross, du darfst nur ausweichen und kontern." }
+        ],
+        "check": "Sparring filmen: Bewegst du nach jeder eigenen Kombination den Kopf? Ziel: in 8 von 10 Fällen."
+      }
+    },
+    {
+      "id": "defense", "pillar": "technik", "stage": 2, "title": "Block & Parade",
+      "desc": "Hände und Arme als Schutz: blocken, parieren, abfangen, Schulterrolle.",
+      "keys": ["Parieren mit kleiner Handbewegung, nicht wegschlagen", "Beim Blocken Spannung im Rumpf", "Augen offen lassen"],
+      "signs": ["Du drehst dich weg oder schließt die Augen", "Deine Deckung wird einfach durchschlagen"],
+      "videos": [
+        { "id": "defense-0", "title": "Parieren statt Blocken: warum es sich lohnt", "format": "Short", "hook": "Hör auf, nur zu blocken. Parieren spart Kraft und öffnet dir den Konter." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Schläge parieren und blocken, ohne die Augen zu schließen oder dich wegzudrehen",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 25 Min.",
+        "exercises": [
+          { "name": "Parade mit Partner, halbes Tempo", "rounds": 3, "work": 120, "rest": 30, "note": "Partner jabbt locker, du parierst mit kleiner Handbewegung. Die Augen bleiben offen." },
+          { "name": "Block unter Last", "rounds": 3, "work": 60, "rest": 30, "note": "Partner schlägt Serien auf die Deckung. Du stehst stabil, Rumpf fest, Kinn unten." },
+          { "name": "Schulterrolle", "rounds": 2, "work": 120, "rest": 30, "note": "Partner schlägt die Rechte, du rollst über die vordere Schulter ab und antwortest mit deiner Rechten." },
+          { "name": "Sparring: einer greift an, einer verteidigt", "rounds": 2, "work": 180, "rest": 60, "note": "Du darfst nur verteidigen. Nach jeder Runde die Rollen tauschen." }
+        ],
+        "check": "Partner zählt: Wie oft schließt du die Augen oder drehst dich weg? Ziel: null pro Runde."
+      }
+    },
+    {
+      "id": "konter", "pillar": "technik", "stage": 3, "title": "Konter",
+      "desc": "Den Angriff des Gegners als Chance nutzen: Slip-Konter, Block-Konter, Pull-Konter.",
+      "keys": ["Erst die Muster des Gegners lesen", "Sofort kontern, das Fenster ist kurz", "Einfache Konter schlagen, die du blind kannst"],
+      "signs": ["Du wartest und kassierst, statt zu antworten", "Du triffst nur, wenn du selbst angreifst"],
+      "videos": [
+        { "id": "konter-0", "title": "3 Konter, mit denen ich Kämpfe gewonnen habe", "format": "Video", "hook": "Mit diesen drei Kontern habe ich Kämpfe gewonnen, und alle drei sind einfach." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Auf jeden Angriff sofort mit einem einfachen Konter antworten",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 35 Min.",
+        "exercises": [
+          { "name": "Konter-Paare", "rounds": 3, "work": 120, "rest": 30, "note": "Partner jabbt, du slipst nach außen und schlägst die Rechte. Immer dasselbe Paar, bis es blind sitzt." },
+          { "name": "Block-Konter", "rounds": 2, "work": 120, "rest": 30, "note": "Partner schlägt einen Haken, du blockst und antwortest sofort mit einem Haken auf derselben Seite." },
+          { "name": "Pratzen mit Rückschlag", "rounds": 3, "work": 180, "rest": 60, "note": "Der Trainer schlägt zurück, du verteidigst und konterst mit zwei Schlägen." },
+          { "name": "Konter-Sparring", "rounds": 2, "work": 180, "rest": 60, "note": "Partner greift an, du darfst nur kontern. Wer selbst zuerst angreift, verliert die Runde." }
+        ],
+        "check": "Sparring filmen: Wie viele Treffer landest du als Konter? Ziel: mindestens drei pro Runde."
+      }
+    },
+    {
+      "id": "ringsteuerung", "pillar": "technik", "stage": 3, "title": "Ringsteuerung",
+      "desc": "Den Gegner in die Ecke schneiden oder selbst sauber aus der Ecke kommen.",
+      "keys": ["Seitlich abschneiden statt hinterherlaufen", "Ecke verlassen mit Pivot oder Winkel", "Die Ringmitte als Ziel"],
+      "signs": ["Du läufst dem Gegner hinterher", "Du kommst aus der Ecke nicht raus"],
+      "videos": [
+        { "id": "ringsteuerung-0", "title": "Ring cutting einfach erklärt", "format": "Video", "hook": "Hör auf, deinem Gegner hinterherzulaufen. Schneid ihm den Weg ab." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Den Gegner in die Ecke schneiden und selbst sauber aus der Ecke kommen",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 30 Min.",
+        "exercises": [
+          { "name": "Ring cutting im Schatten", "rounds": 3, "work": 120, "rest": 30, "note": "Stell dir einen Gegner vor, der kreist. Du schneidest seitlich ab, statt ihm zu folgen." },
+          { "name": "Verfolger-Spiel", "rounds": 3, "work": 120, "rest": 60, "note": "Partner bewegt sich frei, ohne zu schlagen. Du versuchst, ihn mit Seitschritten in eine Ecke zu bringen." },
+          { "name": "Raus aus der Ecke", "rounds": 3, "work": 60, "rest": 30, "note": "Start in der Ecke, der Partner drückt. Raus mit Pivot, Abtauchen oder Kombi und Winkel." },
+          { "name": "Sparring um die Ringmitte", "rounds": 2, "work": 180, "rest": 60, "note": "Ziel ist, die Mitte zu halten. Der Partner zählt, wie oft du an die Seile musst." }
+        ],
+        "check": "Verfolger-Spiel stoppen: Wie lange brauchst du, bis der Partner in der Ecke steht? Ziel: unter 20 s."
+      }
+    },
+    {
+      "id": "infight", "pillar": "technik", "stage": 3, "title": "Infight & Clinch",
+      "desc": "Arbeit auf kurzer Distanz: Kopfposition, Unterarme, kurze Schläge und sauber lösen.",
+      "keys": ["Stirn an die Schulter, Kopf nicht runter", "Kurz und schnell schlagen", "Halten nur regelkonform, auf den Ringrichter achten"],
+      "signs": ["Auf kurzer Distanz bist du hilflos", "Du bekommst Verwarnungen fürs Halten"],
+      "videos": [
+        { "id": "infight-0", "title": "Infight im Amateurboxen: was erlaubt ist", "format": "Short", "hook": "Im Infight darfst du mehr, als du denkst, aber weniger, als viele machen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Auf kurzer Distanz arbeiten und regelkonform lösen",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 30 Min.",
+        "exercises": [
+          { "name": "Kopfposition-Ringen", "rounds": 3, "work": 60, "rest": 30, "note": "Stirn an die Schulter des Partners, beide drücken. Wer die bessere Position hält, gewinnt die Runde." },
+          { "name": "Kurze Serien am Sack", "rounds": 3, "work": 180, "rest": 60, "note": "Eng am Sack, den Kopf außen. Kurze Haken und Aufwärtshaken, kein Ausholen." },
+          { "name": "Infight-Pratzen", "rounds": 3, "work": 120, "rest": 60, "note": "Der Trainer drückt nach vorne, du schlägst kurze Serien und löst mit Schritt und Winkel." },
+          { "name": "Infight-Sparring", "rounds": 2, "work": 120, "rest": 60, "note": "Nur Halbdistanz und Infight. Auf „Break“ sofort lösen." }
+        ],
+        "check": "Nach dem Sparring ehrlich zählen: Wie oft hätte dich ein Ringrichter verwarnt? Ziel: null."
+      }
+    },
+    {
+      "id": "finten", "pillar": "technik", "stage": 3, "title": "Finten & Rhythmus",
+      "desc": "Den Gegner täuschen und den Takt brechen, damit er dich nicht lesen kann.",
+      "keys": ["Finten mit Schulter, Fuß und Blick", "Rhythmus wechseln: schnell, langsam, Pause", "Nicht immer mit derselben Kombi starten"],
+      "signs": ["Der Gegner liest dich nach einer Runde", "Du bist berechenbar"],
+      "videos": [
+        { "id": "finten-0", "title": "Wie ich Gegner mit Finten aus dem Takt bringe", "format": "Video", "hook": "Der beste Schlag ist manchmal der, den du nur andeutest." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Den Gegner mit Finten und Rhythmuswechseln aus dem Takt bringen",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 35 Min.",
+        "exercises": [
+          { "name": "Finten im Schatten", "rounds": 3, "work": 120, "rest": 30, "note": "Vor jeder Kombi eine Finte mit Schulter, Fuß oder Blick. Nur andeuten, nicht ausschlagen." },
+          { "name": "Rhythmus am Sack", "rounds": 3, "work": 180, "rest": 60, "note": "Wechsel zwischen schnell, langsam und Pause. Nie zweimal hintereinander derselbe Takt." },
+          { "name": "Finte und Treffer an den Pratzen", "rounds": 3, "work": 120, "rest": 60, "note": "Der Trainer reagiert auf deine Finte, du triffst die Lücke, die er aufmacht." },
+          { "name": "Sparring mit Aufgabe", "rounds": 2, "work": 180, "rest": 60, "note": "Jeder Angriff beginnt mit einer Finte. Beobachte, wie der Partner reagiert." }
+        ],
+        "check": "Partner fragen: Konnte er dich in Runde 2 noch vorhersagen? Nur die ehrliche Antwort zählt."
+      }
+    },
+    {
+      "id": "rumpf", "pillar": "kraft", "stage": 1, "title": "Rumpfstabilität",
+      "desc": "Der Rumpf überträgt die Kraft von den Beinen in die Faust und schützt bei Körpertreffern.",
+      "keys": ["Anti-Rotation, z. B. Pallof Press", "Planks und Dead Bugs", "2–3× pro Woche, 15 Minuten"],
+      "signs": ["Körpertreffer tun dir sehr weh", "Du verlierst bei Schlägen die Stabilität"],
+      "videos": [
+        { "id": "rumpf-0", "title": "Core-Training für Boxer in 10 Minuten", "format": "Short", "hook": "Zehn Minuten, kein Equipment, und Körpertreffer tun weniger weh." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Ein Rumpf, der Kraft überträgt und Körpertreffer aushält",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 15 Min.",
+        "exercises": [
+          { "name": "Pallof Press", "rounds": 3, "reps": "10 pro Seite", "rest": 45, "note": "Band auf Brusthöhe, Arme nach vorne strecken. Der Rumpf dreht nicht mit." },
+          { "name": "Dead Bug", "rounds": 3, "reps": "8 pro Seite", "rest": 45, "note": "Der untere Rücken bleibt am Boden. Langsam bewegen, dabei ausatmen." },
+          { "name": "Plank mit Schulterklopfen", "rounds": 3, "work": 40, "rest": 30, "note": "Abwechselnd die Schulter antippen. Die Hüfte bleibt ruhig, kein Schaukeln." },
+          { "name": "Medizinball auf den Bauch", "rounds": 3, "reps": "10 Würfe", "rest": 45, "note": "Partner lässt einen leichten Ball auf deinen Bauch fallen, du spannst an und atmest aus. Langsam steigern." }
+        ],
+        "check": "Plank mit Schulterklopfen auf Zeit: Ziel sind 60 s ohne Hüftwackeln."
+      }
+    },
+    {
+      "id": "grundkraft", "pillar": "kraft", "stage": 1, "title": "Grundkraft",
+      "desc": "Kniebeuge, Kreuzheben, Drücken, Ziehen. Die Basis für Explosivität und weniger Verletzungen.",
+      "keys": ["Saubere Technik vor Gewicht", "Zwei Einheiten pro Woche reichen", "Nicht bis zum Muskelversagen vor dem Boxtraining"],
+      "signs": ["Du wirst im Clinch weggeschoben", "Deine Schläge fühlen sich leicht an"],
+      "videos": [
+        { "id": "grundkraft-0", "title": "Macht Krafttraining langsam? Mythos-Check", "format": "Video", "hook": "Macht Krafttraining Boxer langsam? Die Sportwissenschaft hat dazu eine klare Antwort." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Solide Grundkraft in Beinen, Rücken und Oberkörper",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 45 Min.",
+        "exercises": [
+          { "name": "Kniebeuge", "rounds": 4, "reps": "5 Wdh.", "rest": 120, "note": "Schwer, aber sauber. Zwei Wiederholungen bleiben im Tank." },
+          { "name": "Rumänisches Kreuzheben", "rounds": 3, "reps": "6 Wdh.", "rest": 120, "note": "Hüfte nach hinten schieben, der Rücken bleibt neutral." },
+          { "name": "Bankdrücken oder Liegestütz mit Gewicht", "rounds": 3, "reps": "6 Wdh.", "rest": 90, "note": "Kontrolliert runter, explosiv hoch." },
+          { "name": "Klimmzüge oder Rudern", "rounds": 3, "reps": "8 Wdh.", "rest": 90, "note": "Ziehen gleicht das viele Schlagen aus und schützt die Schultern." }
+        ],
+        "check": "Alle 4 Wochen das Gewicht für 5 saubere Kniebeugen notieren. Ziel: steigt bei gleichem Körpergewicht."
+      }
+    },
+    {
+      "id": "schnellkraft", "pillar": "kraft", "stage": 2, "title": "Schnellkraft",
+      "desc": "Kraft schnell abrufen: Medizinball-Würfe, Sprünge, Kettlebell-Swings.",
+      "keys": ["Wenige Wiederholungen, volle Geschwindigkeit", "Vollständige Pausen", "Rotationswürfe für die Haken"],
+      "signs": ["Deine Schläge haben keinen Punch", "Du bist langsam im Antritt nach vorne"],
+      "videos": [
+        { "id": "schnellkraft-0", "title": "Medizinball-Workout für mehr Schlagkraft", "format": "Video", "hook": "Mehr Punch kommt nicht vom Bankdrücken, sondern vom Medizinball." },
+        { "id": "schnellkraft-1", "title": "Rotationswurf: meine Lieblingsübung", "format": "Short", "hook": "Wenn ich nur eine Übung für mehr Schlagkraft machen dürfte, wäre es diese." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Kraft schnell abrufen, für mehr Punch und einen schnellen Antritt",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 25 Min.",
+        "exercises": [
+          { "name": "Medizinball-Rotationswurf", "rounds": 4, "reps": "5 pro Seite", "rest": 60, "note": "Aus dem Boxstand gegen die Wand. Der hintere Fuß dreht ein wie bei der Rechten." },
+          { "name": "Medizinball-Stoß", "rounds": 3, "reps": "5 Wdh.", "rest": 60, "note": "Aus dem Boxstand explosiv nach vorne stoßen, wie eine Gerade." },
+          { "name": "Box Jumps", "rounds": 3, "reps": "5 Wdh.", "rest": 90, "note": "Hoch springen, leise landen. Runter steigen, nicht springen." },
+          { "name": "Kettlebell Swing", "rounds": 3, "reps": "10 Wdh.", "rest": 60, "note": "Die Kraft kommt aus dem Hüftstoß, die Arme sind nur Seile." }
+        ],
+        "check": "Weite des Medizinball-Stoßes alle 2 Wochen messen. Ziel: wird weiter."
+      }
+    },
+    {
+      "id": "nacken", "pillar": "kraft", "stage": 2, "title": "Nacken & Schultern",
+      "desc": "Vorbeugung: einen starken Nacken und stabile Schultern, damit du Treffer besser wegsteckst und gesund bleibst.",
+      "keys": ["Nackentraining mit Band oder Handtuch", "Außenrotation mit Band", "Vor jedem Training aktivieren"],
+      "signs": ["Die Schulter zwickt nach langen Runden", "Der Kopf fliegt bei Treffern weit nach hinten"],
+      "videos": [
+        { "id": "nacken-0", "title": "Nackentraining für Boxer", "format": "Short", "hook": "Ein starker Nacken ist deine beste Versicherung im Ring." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Nacken und Schultern, die Treffer wegstecken und gesund bleiben",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 12 Min.",
+        "exercises": [
+          { "name": "Nacken isometrisch", "rounds": 4, "work": 20, "rest": 20, "note": "Hand an Stirn, Hinterkopf, linke und rechte Seite. Gegendrücken, der Kopf bleibt still. Pro Runde eine Richtung." },
+          { "name": "Nacken mit Handtuch", "rounds": 3, "reps": "12 Wdh.", "rest": 45, "note": "Partner zieht leicht am Handtuch, du arbeitest langsam dagegen." },
+          { "name": "Außenrotation mit Band", "rounds": 3, "reps": "15 Wdh.", "rest": 30, "note": "Ellbogen bleibt am Körper, langsam zurück." },
+          { "name": "Face Pulls", "rounds": 3, "reps": "15 Wdh.", "rest": 30, "note": "Zum Gesicht ziehen, Ellbogen hoch, kurz halten." }
+        ],
+        "check": "Nach langen Sparrings notieren, ob die Schulter zwickt. Ziel: wird über die Wochen seltener."
+      }
+    },
+    {
+      "id": "periodisierung", "pillar": "kraft", "stage": 3, "title": "Kraft im Wettkampfjahr",
+      "desc": "Krafttraining an die Kampftermine anpassen: Aufbau, Erhalt, Taper.",
+      "keys": ["Weit weg vom Kampf: mehr Volumen", "Nah am Kampf: wenig, schnell, frisch", "Letzte schwere Einheit etwa 10 Tage vorher"],
+      "signs": ["Du bist am Kampftag schwer in den Beinen"],
+      "videos": [
+        { "id": "periodisierung-0", "title": "So plane ich Krafttraining vor einem Kampf", "format": "Video", "hook": "Acht Wochen vor dem Kampf trainiere ich anders als zwei Wochen davor. So sieht der Plan aus." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Kraft so planen, dass du am Kampftag frisch und schnell bist",
+        "freq": "Je nach Phase", "perWeek": null, "dur": "ca. 30–45 Min. pro Einheit",
+        "exercises": [
+          { "name": "Phase 1: Aufbau", "label": "10–12 Wochen vorher · 3× pro Woche", "note": "Mehr Volumen: 3–4 Sätze, 6–10 Wiederholungen in den Grundübungen." },
+          { "name": "Phase 2: Maximalkraft", "label": "6–9 Wochen vorher · 2× pro Woche", "note": "Schwerer, weniger Wiederholungen: 3–5 pro Satz, lange Pausen." },
+          { "name": "Phase 3: Schnellkraft", "label": "3–5 Wochen vorher · 2× pro Woche", "note": "Leichtere Gewichte, maximale Geschwindigkeit. Würfe und Sprünge statt schwerer Hantel." },
+          { "name": "Phase 4: Taper", "label": "Letzte 10 Tage", "note": "Letzte schwere Einheit etwa 10 Tage vorher. Danach nur kurze, schnelle Aktivierung." }
+        ],
+        "check": "Am Kampftag notieren, wie frisch sich die Beine anfühlen (1–10), und den Plan danach anpassen."
+      }
+    },
+    {
+      "id": "aerob", "pillar": "ausdauer", "stage": 1, "title": "Aerobe Basis",
+      "desc": "Locker laufen, Rad fahren, Seil springen. Die Basis, damit du dich in der Rundenpause erholst.",
+      "keys": ["Lockeres Tempo, du kannst noch sprechen", "2–3× pro Woche 30–45 Minuten", "Eine Pulsuhr hilft bei der Steuerung"],
+      "signs": ["Du erholst dich in der Rundenpause kaum", "Der Puls bleibt nach dem Training lange hoch"],
+      "videos": [
+        { "id": "aerob-0", "title": "Wie viel muss ein Boxer laufen?", "format": "Video", "hook": "Wie viel muss ein Boxer wirklich laufen? Weniger, als du denkst, aber regelmäßiger." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Eine aerobe Basis, mit der du dich in der Rundenpause schnell erholst",
+        "freq": "3× pro Woche", "perWeek": 3, "dur": "ca. 50 Min.",
+        "exercises": [
+          { "name": "Lockerer Dauerlauf oder Rad", "rounds": 1, "work": 1800, "rest": 60, "note": "Sprechtempo, etwa 60–70 % vom Maximalpuls. Wenn du nicht mehr reden kannst, bist du zu schnell." },
+          { "name": "Lockere Steigerungen", "rounds": 4, "work": 20, "rest": 60, "note": "Locker schneller werden, nicht sprinten." },
+          { "name": "Lockeres Schattenboxen", "rounds": 3, "work": 180, "rest": 60, "note": "Ruhiges Tempo, durch die Nase atmen." }
+        ],
+        "check": "Puls direkt nach einer harten Runde und 60 s später messen. Ziel: Er fällt über die Wochen schneller."
+      }
+    },
+    {
+      "id": "seil", "pillar": "ausdauer", "stage": 1, "title": "Seilspringen",
+      "desc": "Koordination, Fußarbeit und Ausdauer in einer Übung.",
+      "keys": ["Auf den Fußballen bleiben", "Aus den Handgelenken drehen, nicht aus den Armen", "In Runden springen: 3 min / 1 min"],
+      "signs": ["Du bist schwer auf den Füßen"],
+      "videos": [
+        { "id": "seil-0", "title": "Seilspringen lernen in 7 Tagen", "format": "Serie", "hook": "Tag eins: Du kannst nicht Seilspringen. Tag sieben: Jetzt schon." },
+        { "id": "seil-1", "title": "3 Sprungtricks, die die Fußarbeit verbessern", "format": "Short", "hook": "Drei Sprungtricks, die direkt deine Fußarbeit im Ring besser machen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Leicht auf den Füßen, mit Rhythmus und Ausdauer",
+        "freq": "4× pro Woche", "perWeek": 4, "dur": "ca. 20 Min.",
+        "exercises": [
+          { "name": "Grundsprung", "rounds": 3, "work": 180, "rest": 60, "note": "Locker auf den Fußballen, aus dem Handgelenk drehen." },
+          { "name": "Boxer-Skip", "rounds": 2, "work": 120, "rest": 30, "note": "Das Gewicht von Fuß zu Fuß wechseln, wie im Ring." },
+          { "name": "Wechselsprünge", "rounds": 2, "work": 60, "rest": 30, "note": "Seitlich, vor und zurück, Kreuzsprung. Alle 15 s wechseln." },
+          { "name": "Sprint-Finisher", "rounds": 1, "work": 60, "rest": 0, "note": "30 s Vollgas, dann 30 s Doppelsprünge." }
+        ],
+        "check": "Fehler pro 3-Minuten-Runde zählen. Ziel: höchstens zwei."
+      }
+    },
+    {
+      "id": "runden", "pillar": "ausdauer", "stage": 2, "title": "Rundenausdauer",
+      "desc": "Amateurkampf heißt 3 Runden à 3 Minuten. Trainiert wird in genau diesem Rhythmus.",
+      "keys": ["Intervalle im Kampftakt", "Hohe Intensität, aktive Pause", "Sparring und Pratzen zählen mit"],
+      "signs": ["Dir geht in Runde 3 die Luft aus", "Deine Schlagfrequenz bricht in der zweiten Hälfte ein"],
+      "videos": [
+        { "id": "runden-0", "title": "Mein 3×3-Konditionstraining", "format": "Video", "hook": "Drei Runden à drei Minuten klingt kurz, bis du in Runde drei stehst." },
+        { "id": "runden-1", "title": "Runde 3 überstehen: so trainiere ich", "format": "Short", "hook": "Runde drei entscheidet Amateurkämpfe. So trainiere ich dafür." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "3 Runden à 3 Minuten mit gleichbleibender Schlagfrequenz",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 45 Min.",
+        "exercises": [
+          { "name": "Sandsack-Intervalle", "rounds": 4, "work": 180, "rest": 60, "note": "20 s locker, 10 s Vollgas, im Wechsel, bis die Runde vorbei ist." },
+          { "name": "Pratzenrunden", "rounds": 3, "work": 180, "rest": 60, "note": "Der Trainer gibt das Tempo vor, in der letzten Minute wird der Druck erhöht." },
+          { "name": "Sprawl & Burpee-Leiter", "rounds": 3, "work": 120, "rest": 60, "note": "Wiederholungen steigern: 1, 2, 3 … bis die Zeit um ist." },
+          { "name": "Seil-Finisher", "rounds": 1, "work": 300, "rest": 0, "note": "Gleichmäßig springen, in den letzten 30 s Doppelsprünge oder Sprints." }
+        ],
+        "check": "Schläge pro Runde zählen (App oder Video). Ziel: Runde 3 schafft mindestens 90 % von Runde 1."
+      }
+    },
+    {
+      "id": "laktat", "pillar": "ausdauer", "stage": 2, "title": "Laktattoleranz",
+      "desc": "Weiter arbeiten, wenn die Arme brennen: harte, kurze Intervalle.",
+      "keys": ["Kurze, sehr harte Intervalle (20–40 s)", "Höchstens 2× pro Woche", "Nicht in der Kampfwoche"],
+      "signs": ["Die Arme werden nach schnellen Serien schwer"],
+      "videos": [
+        { "id": "laktat-0", "title": "Der härteste Finisher meines Trainings", "format": "Short", "hook": "Das ist der härteste Finisher in meinem Training. Probier ihn, wenn du dich traust." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Weiterschlagen, wenn die Arme brennen",
+        "freq": "1–2× pro Woche, nie in der Kampfwoche", "perWeek": 2, "dur": "ca. 15 Min.",
+        "exercises": [
+          { "name": "Sandsack-Sprints", "rounds": 6, "work": 30, "rest": 30, "note": "Durchgehend gerade Schläge mit Vollgas. Die Technik muss halten." },
+          { "name": "Burpee plus Geraden", "rounds": 4, "work": 40, "rest": 40, "note": "Ein Burpee, zehn schnelle Geraden, wiederholen." },
+          { "name": "Pratzen-Flurry", "rounds": 4, "work": 20, "rest": 40, "note": "Der Trainer hält, du schlägst so schnell es geht." }
+        ],
+        "check": "Schläge im ersten und letzten 30-s-Sprint zählen. Ziel: weniger als 20 % Abfall."
+      }
+    },
+    {
+      "id": "kampfkondi", "pillar": "ausdauer", "stage": 3, "title": "Kondition im Fight Camp",
+      "desc": "Die letzten 6–8 Wochen: Kondition im Kampfmuster, dann die Belastung runterfahren (Tapering).",
+      "keys": ["Sparring-Runden auf Kampfdauer", "Extrarunde: 4 statt 3 Runden", "Letzte Woche: weniger Umfang, mehr Frische"],
+      "signs": ["Im Kampf bist du schneller platt als im Sparring"],
+      "videos": [
+        { "id": "kampfkondi-0", "title": "Fight Camp Vlog: die letzten 6 Wochen", "format": "Serie", "hook": "Noch sechs Wochen bis zum Kampf. Ab heute nehme ich dich mit." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Die Kondition genau ins Kampfmuster bringen",
+        "freq": "3× pro Woche im Fight Camp", "perWeek": 3, "dur": "ca. 45 Min.",
+        "exercises": [
+          { "name": "Sparring mit Extrarunde", "rounds": 4, "work": 180, "rest": 60, "note": "Eine Runde mehr als im Kampf. Ab Runde 3 kommt ein frischer Partner rein." },
+          { "name": "Pratzen-Kampfrunden", "rounds": 3, "work": 180, "rest": 60, "note": "Der Trainer spielt den Gegner, Tempo wie im Kampf." },
+          { "name": "Endspurt am Sack", "rounds": 3, "work": 60, "rest": 30, "note": "Die letzte Minute einer Runde: alles raus." },
+          { "name": "Taper in der letzten Woche", "label": "Letzte Woche", "note": "Umfang halbieren, nur kurze, scharfe Einheiten. Frisch in den Ring." }
+        ],
+        "check": "Puls nach der vierten Runde und 60 s später notieren. Ziel: fällt Woche für Woche schneller."
+      }
+    },
+    {
+      "id": "routine", "pillar": "mental", "stage": 1, "title": "Disziplin & Routine",
+      "desc": "Regelmäßig auftauchen schlägt Motivation. Feste Trainingszeiten und kleine Ziele.",
+      "keys": ["Fester Wochenplan", "Trainingstagebuch führen", "Ein kleines Ziel pro Monat"],
+      "signs": ["Du trainierst unregelmäßig", "Die Motivation kommt und geht"],
+      "videos": [
+        { "id": "routine-0", "title": "Ein Trainingstag in meinem Leben", "format": "Video", "hook": "So sieht ein ganz normaler Trainingstag bei mir aus, vom Aufstehen bis zum Sandsack." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Regelmäßig trainieren, auch wenn die Motivation fehlt",
+        "freq": "Jede Woche", "perWeek": 1, "dur": "ca. 15 Min.",
+        "exercises": [
+          { "name": "Wochenplan schreiben", "label": "Sonntags · 10 min", "note": "Feste Tage und Uhrzeiten für die nächste Woche eintragen, wie Termine." },
+          { "name": "Trainingstagebuch", "label": "Nach jedem Training · 2 min", "note": "Was hast du gemacht, wie hat es sich angefühlt, was machst du nächstes Mal besser?" },
+          { "name": "Monatsziel", "label": "1× im Monat", "note": "Ein kleines, messbares Ziel, z. B. 12 Einheiten oder eine Runde Seil ohne Fehler." },
+          { "name": "Minimal-Einheit für schlechte Tage", "rounds": 3, "work": 180, "rest": 60, "note": "Wenn gar nichts geht: drei Runden Schattenboxen. Zählt trotzdem." }
+        ],
+        "check": "Am Monatsende die Einheiten zählen: Hast du mindestens 80 % deines Plans geschafft?"
+      }
+    },
+    {
+      "id": "treffer", "pillar": "mental", "stage": 1, "title": "Umgang mit Treffern",
+      "desc": "Getroffen werden gehört dazu. Ruhig bleiben, weiteratmen, antworten.",
+      "keys": ["Mit leichtem, technischem Sparring starten", "Beim Schlagen und Kassieren ausatmen", "Nach einem Treffer sofort antworten oder Winkel wechseln"],
+      "signs": ["Du frierst ein, wenn Druck kommt", "Du drehst dich nach Treffern weg"],
+      "videos": [
+        { "id": "treffer-0", "title": "Angst vor dem ersten Sparring? Meine Erfahrung", "format": "Video", "hook": "Vor meinem ersten Sparring hatte ich richtig Angst. Das hier hat mir geholfen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Bei Treffern ruhig bleiben, weiteratmen und antworten",
+        "freq": "2× pro Woche", "perWeek": 2, "dur": "ca. 25 Min.",
+        "exercises": [
+          { "name": "Atmen unter Druck", "rounds": 2, "work": 60, "rest": 30, "note": "Partner schlägt Serien auf deine Deckung. Bei jedem Schlag atmest du kurz aus." },
+          { "name": "Leichtes Treffer-Sparring", "rounds": 3, "work": 120, "rest": 60, "note": "Partner schlägt leicht und kommt ab und zu durch. Du bleibst ruhig und antwortest." },
+          { "name": "Treffer, Antwort", "rounds": 3, "work": 120, "rest": 60, "note": "Nach jedem Treffer, den du kassierst: sofort zwei Schläge zurück oder den Winkel wechseln." },
+          { "name": "An den Seilen", "rounds": 2, "work": 60, "rest": 60, "note": "Partner drückt dich an die Seile. Du bleibst ruhig und arbeitest dich raus." }
+        ],
+        "check": "Partner zählt mit: Wie oft hast du nach einem Treffer sofort geantwortet? Ziel: fast immer."
+      }
+    },
+    {
+      "id": "fokus", "pillar": "mental", "stage": 2, "title": "Fokus im Sparring",
+      "desc": "Mit einer Aufgabe ins Sparring gehen statt einfach drauflos.",
+      "keys": ["Ein Ziel pro Sparring, z. B. nur Jab", "Nach jeder Runde kurz reflektieren", "Sparring filmen und anschauen"],
+      "signs": ["Du verlierst im Sparring den Kopf und wirst wild", "Du weißt hinterher nicht, was passiert ist"],
+      "videos": [
+        { "id": "fokus-0", "title": "Sparring-Breakdown mit Kommentar", "format": "Serie", "hook": "Ich zeige dir mein Sparring und sage dir ehrlich, was falsch lief." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Mit einer klaren Aufgabe ins Sparring und hinterher wissen, was passiert ist",
+        "freq": "Bei jedem Sparring", "perWeek": 2, "dur": "Sparring plus 15 Min.",
+        "exercises": [
+          { "name": "Aufgabe festlegen", "label": "Vor dem Sparring", "note": "Ein Ziel, z. B. nur Jab oder nach jeder Kombi den Kopf bewegen. Aufschreiben." },
+          { "name": "Sparring mit Aufgabe", "rounds": 3, "work": 180, "rest": 60, "note": "Nur die Aufgabe zählt, nicht wer die Runde gewinnt. In jeder Pause ein Satz an dich: Was klappt, was änderst du?" },
+          { "name": "Video-Check", "label": "Danach · 10 min", "note": "Sparring anschauen und drei Beobachtungen notieren." }
+        ],
+        "check": "Kannst du nach dem Sparring klar Ja oder Nein zu deiner Aufgabe sagen? Ziel: jedes Mal."
+      }
+    },
+    {
+      "id": "visualisierung", "pillar": "mental", "stage": 2, "title": "Visualisierung",
+      "desc": "Kampfszenen im Kopf durchspielen: Einlauf, erste Runde, Reaktion auf einen Treffer.",
+      "keys": ["5–10 Minuten täglich", "Möglichst konkret, mit allen Sinnen", "Auch schwierige Situationen durchspielen"],
+      "signs": ["Neue Situationen überfordern dich"],
+      "videos": [
+        { "id": "visualisierung-0", "title": "Wie ich mich mental auf Kämpfe vorbereite", "format": "Video", "hook": "Bevor ich in den Ring steige, habe ich den Kampf schon hundertmal gesehen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Kampfszenen so oft durchspielen, dass sie sich vertraut anfühlen",
+        "freq": "Täglich", "perWeek": 7, "dur": "ca. 10 Min.",
+        "exercises": [
+          { "name": "Runterkommen", "rounds": 1, "work": 60, "rest": 0, "note": "Augen zu, langsam atmen: 4 s ein, 6 s aus." },
+          { "name": "Einlauf und erste Runde", "rounds": 1, "work": 180, "rest": 0, "note": "Die Halle, die Geräusche, in den Ring steigen, der erste Jab. Mit allen Sinnen." },
+          { "name": "Schwierige Situation", "rounds": 1, "work": 180, "rest": 0, "note": "Du wirst getroffen oder liegst hinten. Sieh dich ruhig reagieren und antworten." },
+          { "name": "Die letzte Glocke", "rounds": 1, "work": 60, "rest": 0, "note": "Der Arm geht hoch. Dieses Gefühl speichern." }
+        ],
+        "check": "Nach einer Woche: Wie klar sind die Bilder auf einer Skala von 1–10? Ziel: steigt."
+      }
+    },
+    {
+      "id": "nerven", "pillar": "mental", "stage": 3, "title": "Wettkampfnerven",
+      "desc": "Nervosität ist normal. Mit festen Routinen wird sie zu Energie.",
+      "keys": ["Feste Routine am Kampftag", "Atmung: 4 s ein, 6 s aus", "Fokus auf das, was du kontrollierst"],
+      "signs": ["Du bist vor Kämpfen extrem nervös", "Du boxt im Kampf schlechter als im Training"],
+      "videos": [
+        { "id": "nerven-0", "title": "Mein Kampftag vom Aufstehen bis zum Ring", "format": "Video", "hook": "Vom Aufstehen bis zur ersten Glocke: So läuft mein Kampftag." },
+        { "id": "nerven-1", "title": "Atemtechnik gegen Lampenfieber", "format": "Short", "hook": "Diese Atemtechnik nutze ich vor jedem Kampf gegen die Nervosität." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Nervosität vor dem Kampf kontrollieren und in Energie umwandeln",
+        "freq": "Täglich in der Kampfwoche", "perWeek": 7, "dur": "10–15 Min.",
+        "exercises": [
+          { "name": "Box-Atmung", "rounds": 1, "work": 64, "rest": 0, "label": "4 Durchgänge · 4-4-4-4 s", "note": "Einatmen, halten, ausatmen, halten. Je 4 Sekunden." },
+          { "name": "Visualisierung", "rounds": 1, "work": 300, "rest": 0, "note": "Einlauf, erste Runde, erster Treffer, deine Antwort. So konkret wie möglich." },
+          { "name": "Kampftag-Routine schreiben", "label": "einmalig", "note": "Ablauf vom Aufstehen bis zum Ring festlegen: Essen, Musik, Aufwärmen." },
+          { "name": "Drucksparring", "rounds": 2, "work": 180, "rest": 60, "note": "Sparring mit Zuschauern, Punktrichter und Ringrichter simulieren." }
+        ],
+        "check": "Nach dem Kampf die Nervosität von 1–10 notieren und mit der eigenen Leistung vergleichen."
+      }
+    },
+    {
+      "id": "niederlage", "pillar": "mental", "stage": 3, "title": "Nach Niederlagen zurückkommen",
+      "desc": "Aus Niederlagen lernen, statt daran zu zerbrechen.",
+      "keys": ["Den Kampf ehrlich analysieren, mit Video", "Drei Learnings aufschreiben", "Das nächste Ziel setzen"],
+      "signs": ["Eine Niederlage hängt dir lange nach"],
+      "videos": [
+        { "id": "niederlage-0", "title": "Meine bitterste Niederlage und was ich gelernt habe", "format": "Video", "hook": "Das war meine bitterste Niederlage, und sie hat mich besser gemacht." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Aus der Niederlage lernen und mit einem klaren Ziel zurückkommen",
+        "freq": "Nach jedem verlorenen Kampf", "perWeek": null, "dur": "ca. 1 Stunde, verteilt auf eine Woche",
+        "exercises": [
+          { "name": "Abstand", "label": "1–3 Tage", "note": "Kein Video, keine Analyse. Erst mal Abstand gewinnen." },
+          { "name": "Video-Analyse", "label": "30 min", "note": "Den Kampf ehrlich anschauen, am besten zusammen mit dem Trainer." },
+          { "name": "Drei Learnings", "label": "10 min", "note": "Was hat funktioniert, was nicht, und was trainierst du jetzt?" },
+          { "name": "Neues Ziel", "label": "5 min", "note": "Nächster Kampf oder nächstes Turnier, mit Datum." },
+          { "name": "Erstes Training danach", "rounds": 3, "work": 180, "rest": 60, "note": "Ein Training mit Fokus auf Learning Nummer eins." }
+        ],
+        "check": "Vier Wochen später: Hast du an allen drei Learnings gearbeitet? Abhaken."
+      }
+    },
+    {
+      "id": "schlaf", "pillar": "regen", "stage": 1, "title": "Schlaf",
+      "desc": "Im Schlaf passiert die Anpassung ans Training. Ohne Schlaf kein Fortschritt.",
+      "keys": ["7–9 Stunden", "Feste Schlafzeiten", "Bildschirm aus vor dem Schlafen"],
+      "signs": ["Du fühlst dich im Training oft platt"],
+      "videos": [
+        { "id": "schlaf-0", "title": "Warum Schlaf mein bestes Doping ist", "format": "Short", "hook": "Das beste legale Doping kostet nichts: Schlaf." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Regelmäßig 7–9 Stunden guter Schlaf",
+        "freq": "Täglich", "perWeek": 7, "dur": "ca. 5 Min. plus Disziplin",
+        "exercises": [
+          { "name": "Feste Aufstehzeit", "label": "Jeden Tag", "note": "Immer zur gleichen Zeit aufstehen, auch am Wochenende." },
+          { "name": "Bildschirm aus", "label": "60 min vor dem Schlafen", "note": "Handy weg, Licht runter." },
+          { "name": "Runterfahren", "rounds": 1, "work": 300, "rest": 0, "note": "Box-Atmung oder lockeres Dehnen im Bett." },
+          { "name": "Schlaf-Log", "label": "Morgens · 1 min", "note": "Stunden und Gefühl (1–5) notieren." }
+        ],
+        "check": "Wochenschnitt ausrechnen. Ziel: mindestens 7,5 Stunden."
+      }
+    },
+    {
+      "id": "ernaehrung", "pillar": "regen", "stage": 1, "title": "Ernährung Basics",
+      "desc": "Genug Energie fürs Training, genug Eiweiß für die Muskeln.",
+      "keys": ["Eiweiß: ca. 1,6–2 g pro kg Körpergewicht", "Kohlenhydrate rund ums Training", "Viel trinken"],
+      "signs": ["Dir fehlt Energie im Training"],
+      "videos": [
+        { "id": "ernaehrung-0", "title": "Was ein Boxer an einem Tag isst", "format": "Video", "hook": "Das esse ich an einem ganz normalen Trainingstag." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Genug Energie fürs Training und genug Eiweiß für die Muskeln",
+        "freq": "Täglich", "perWeek": 7, "dur": "Mahlzeiten planen, ca. 10 Min.",
+        "exercises": [
+          { "name": "Eiweiß verteilen", "label": "3–4 Mahlzeiten", "note": "Pro Mahlzeit etwa eine Handfläche Eiweiß: Fleisch, Fisch, Eier, Quark, Hülsenfrüchte." },
+          { "name": "Vor dem Training", "label": "2–3 h vorher", "note": "Kohlenhydrate und etwas Eiweiß, wenig Fett." },
+          { "name": "Nach dem Training", "label": "Innerhalb von 2 h", "note": "Eiweiß und Kohlenhydrate auffüllen." },
+          { "name": "Trinken", "label": "Über den Tag", "note": "Etwa 35 ml pro kg Körpergewicht, plus das, was du im Training ausschwitzt." }
+        ],
+        "check": "Drei Tage lang alles aufschreiben (eine App reicht). Kommst du auf 1,6 g Eiweiß pro kg?"
+      }
+    },
+    {
+      "id": "haende", "pillar": "regen", "stage": 2, "title": "Hände & Verletzungsschutz",
+      "desc": "Bandagieren, Aufwärmen, Belastung steuern. Wer verletzt ist, trainiert nicht.",
+      "keys": ["Richtig bandagieren", "Passendes Handschuhgewicht", "Schmerzen ernst nehmen"],
+      "signs": ["Handgelenk oder Knöchel schmerzen"],
+      "videos": [
+        { "id": "haende-0", "title": "Hände bandagieren wie im Wettkampf", "format": "Short", "hook": "So bandagiere ich meine Hände im Wettkampf, Schritt für Schritt." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Gesunde Hände und Handgelenke, damit du jede Woche trainieren kannst",
+        "freq": "Vor jedem Boxtraining", "perWeek": 4, "dur": "ca. 8 Min.",
+        "exercises": [
+          { "name": "Bandagieren", "label": "Vor jedem Training", "note": "Erst das Handgelenk, dann die Knöchel, dann zwischen den Fingern. Fest, aber nicht abschnüren." },
+          { "name": "Handgelenk mobilisieren", "rounds": 1, "work": 120, "rest": 0, "note": "Kreisen, beugen, strecken, in alle Richtungen." },
+          { "name": "Griffkraft", "rounds": 3, "work": 30, "rest": 30, "note": "Knetball drücken oder eine schwere Hantel halten." },
+          { "name": "Leichte Runde am Sack", "rounds": 1, "work": 180, "rest": 0, "note": "Erst locker anschlagen, dann hart." }
+        ],
+        "check": "Schmerz nach dem Training notieren (0–10). Liegt er zwei Tage in Folge über 3: Pause und zum Arzt."
+      }
+    },
+    {
+      "id": "gewicht", "pillar": "regen", "stage": 2, "title": "Gewichtsklasse finden",
+      "desc": "Eine realistische Klasse wählen und langsam dorthin kommen.",
+      "keys": ["Klasse nach Körperbau und Alltagsgewicht", "Maximal 0,5–1 kg pro Woche abnehmen", "Keine Crash-Diät im Aufbau"],
+      "signs": ["Du bist am Kampftag nach dem Gewichtmachen kraftlos"],
+      "videos": [
+        { "id": "gewicht-0", "title": "Gewicht machen im Amateurboxen: was ich falsch gemacht habe", "format": "Video", "hook": "Beim Gewichtmachen habe ich so ziemlich alles falsch gemacht, damit du es nicht musst." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Eine realistische Gewichtsklasse, die du ohne Crash erreichst",
+        "freq": "Jede Woche", "perWeek": 1, "dur": "ca. 5 Min. pro Woche",
+        "exercises": [
+          { "name": "Morgengewicht", "label": "Täglich", "note": "Nach dem Aufstehen und nach der Toilette wiegen. Es zählt der Wochenschnitt, nicht der Tageswert." },
+          { "name": "Klasse prüfen", "label": "Einmalig", "note": "Alltagsgewicht minus höchstens 3–5 %. Ist die Klasse weiter weg, nimm die nächsthöhere." },
+          { "name": "Wochenziel", "label": "Sonntags", "note": "0,5–1 kg pro Woche, nicht mehr." },
+          { "name": "Gefühl im Sparring", "label": "1× pro Woche", "note": "Fühlst du dich im Sparring kraftlos, geht es zu schnell." }
+        ],
+        "check": "Wochenschnitt über 4 Wochen: Liegt die Abnahme zwischen 0,5 und 1 kg pro Woche?"
+      }
+    },
+    {
+      "id": "kampfwoche", "pillar": "regen", "stage": 3, "title": "Kampfwoche & Wiegen",
+      "desc": "Die letzte Woche: Belastung runter, Schärfe hoch, Wiegen und Auffüllen planen.",
+      "keys": ["Weniger Umfang, kurze scharfe Einheiten", "Nach dem Wiegen gezielt auffüllen", "Den Ablauf vorher aufschreiben"],
+      "signs": ["Du bist nach dem Wiegen schlapp"],
+      "videos": [
+        { "id": "kampfwoche-0", "title": "Kampfwoche Vlog", "format": "Serie", "hook": "Kampfwoche: weniger trainieren, mehr gewinnen." }
+      ],
+      "drill": {
+        "status": "entwurf", "goal": "Frisch und scharf in den Ring, das Wiegen ohne Stress",
+        "freq": "In der Kampfwoche", "perWeek": null, "dur": "ca. 20 Min. pro Einheit",
+        "exercises": [
+          { "name": "Kurze, scharfe Pratzen", "rounds": 3, "work": 120, "rest": 60, "note": "Hohes Tempo, aber kurz. Danach aufhören, solange es sich gut anfühlt." },
+          { "name": "Schattenboxen mit Kampfplan", "rounds": 3, "work": 180, "rest": 60, "note": "Locker, die Kombis aus deinem Kampfplan." },
+          { "name": "Wiegen planen", "label": "Einmalig", "note": "Uhrzeit, Zielgewicht, was du vorher isst und trinkst. Alles aufschreiben." },
+          { "name": "Auffüllen nach dem Wiegen", "label": "Direkt danach", "note": "Trinken mit etwas Salz, leicht verdauliche Kohlenhydrate, kleine Portionen." }
+        ],
+        "check": "Nach dem Kampf notieren, wie frisch du warst (1–10), und den Plan fürs nächste Mal anpassen."
+      }
+    }
+  ],
+  "symptoms": [
+    { "id": "kopf", "text": "Ich werde oft am Kopf getroffen", "topics": ["headmovement", "defense", "stand"] },
+    { "id": "runde3", "text": "In Runde 3 geht mir die Luft aus", "topics": ["runden", "aerob", "laktat"] },
+    { "id": "seile", "text": "Ich lande ständig an den Seilen", "topics": ["beinarbeit", "ringsteuerung"] },
+    { "id": "jabkonter", "text": "Mein Jab wird gekontert", "topics": ["jab", "finten"] },
+    { "id": "punch", "text": "Meine Schläge haben keinen Punch", "topics": ["schnellkraft", "cross", "grundkraft"] },
+    { "id": "einzel", "text": "Ich schlage nur Einzelschläge", "topics": ["kombi", "haken"] },
+    { "id": "einfrieren", "text": "Ich friere unter Druck ein", "topics": ["treffer", "defense", "fokus"] },
+    { "id": "nervoes", "text": "Vor Kämpfen bin ich extrem nervös", "topics": ["nerven", "visualisierung"] },
+    { "id": "gelesen", "text": "Der Gegner liest mich", "topics": ["finten", "konter"] },
+    { "id": "schmerz", "text": "Hände oder Schultern schmerzen", "topics": ["haende", "nacken"] },
+    { "id": "nachkombi", "text": "Nach meiner Kombi werde ich getroffen", "topics": ["kombi", "headmovement", "beinarbeit"] },
+    { "id": "deckungmuede", "text": "Wenn ich müde werde, fällt die Deckung", "topics": ["stand", "runden", "rumpf"] },
+    { "id": "distanz", "text": "Ich komme nicht in die Distanz", "topics": ["beinarbeit", "jab", "finten"] },
+    { "id": "kurz", "text": "Auf kurzer Distanz bin ich hilflos", "topics": ["infight", "haken"] },
+    { "id": "hinterher", "text": "Ich laufe dem Gegner hinterher", "topics": ["ringsteuerung", "beinarbeit"] },
+    { "id": "koerper", "text": "Körpertreffer tun mir richtig weh", "topics": ["rumpf", "defense"] },
+    { "id": "nieKoerper", "text": "Ich treffe nie zum Körper", "topics": ["haken", "kombi"] },
+    { "id": "warten", "text": "Ich warte und kassiere, statt zu antworten", "topics": ["konter", "treffer"] },
+    { "id": "wild", "text": "Im Sparring werde ich wild", "topics": ["fokus", "treffer"] },
+    { "id": "armeschwer", "text": "Nach schnellen Serien werden die Arme schwer", "topics": ["laktat", "runden"] },
+    { "id": "fuesse", "text": "Ich bin schwer auf den Füßen", "topics": ["seil", "beinarbeit"] },
+    { "id": "clinch", "text": "Im Clinch werde ich weggeschoben", "topics": ["grundkraft", "infight"] },
+    { "id": "kampfschlechter", "text": "Im Kampf boxe ich schlechter als im Training", "topics": ["nerven", "visualisierung", "fokus"] },
+    { "id": "platt", "text": "Im Training bin ich oft platt", "topics": ["schlaf", "ernaehrung", "aerob"] },
+    { "id": "wiegen", "text": "Nach dem Wiegen bin ich kraftlos", "topics": ["gewicht", "kampfwoche"] },
+    { "id": "beinekampf", "text": "Am Kampftag sind meine Beine schwer", "topics": ["periodisierung", "kampfwoche", "kampfkondi"] },
+    { "id": "unregelmaessig", "text": "Ich trainiere unregelmäßig", "topics": ["routine"] },
+    { "id": "niederlage", "text": "Eine Niederlage hängt mir nach", "topics": ["niederlage", "routine"] }
+  ]
+}
