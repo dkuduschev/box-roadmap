@@ -25,7 +25,8 @@ Am einfachsten geht das direkt auf GitHub: Datei anklicken, oben rechts auf den 
   "formats":  { … },   Video-Formate mit Erklärung
   "levels":   [ … ],   Texte für die Selbsteinschätzung 1–5
   "topics":   [ … ],   die Themen, jedes mit Drillplan und Videos
-  "symptoms": [ … ]    die Chips im Problem-Finder
+  "symptoms": [ … ],   die Chips im Problem-Finder
+  "protocols":[ … ]    komplette Einheiten, Runde für Runde
 }
 ```
 
@@ -40,6 +41,7 @@ Am einfachsten geht das direkt auf GitHub: Datei anklicken, oben rechts auf den 
 | `desc` | ja | Ein, zwei Sätze Beschreibung |
 | `keys` | ja | Liste: „Worauf es ankommt“ |
 | `signs` | ja | Liste: „Daran merkst du, dass es fehlt“ (durchsucht die Suche mit) |
+| `variants` | nein | Liste: „Varianten“, z. B. Slip-Jab, Doppeljab |
 | `videos` | ja | Liste von Videos, siehe unten (darf `[]` sein) |
 | `drill` | nein | Drillplan, siehe unten |
 
@@ -105,6 +107,15 @@ Wird „4 × 5 Wdh. · 2 min Pause“. Du tippst „Satz fertig“, dann läuft 
 
 Optional bei allen: `label` überschreibt den automatischen Text, z. B. `"label": "4 Durchgänge · 4-4-4-4 s"`.
 
+**Kommandos (Reaktions-Modus)**, optional bei Übungen auf Zeit:
+
+```json
+{ "name": "Slip-Konter", "rounds": 3, "work": 180, "rest": 60, "cmd": ["Slip", "Pull", "Step Back"], "pace": "mittel" }
+```
+Die App sagt während der Runde zufällig eins der Kommandos an (Stimme oder Signalton) und zeigt es groß an.
+`pace` ist der Abstand zwischen zwei Kommandos: `ruhig` 8–15 s, `mittel` 5–10 s, `schnell` 3–6 s. Im Timer kann man den Takt jederzeit selbst umstellen.
+Tipp: Schreib Kommandos so, wie man sie laut sagt, z. B. `"Step Back, Eins Zwei"`. Die Kommas machen kleine Sprechpausen.
+
 Gut zu wissen: Zwischen zwei Übungen auf Zeit ohne eigene Pause legt der Timer 15 s Wechselzeit ein. Vor der ersten Runde gibt es 10 s zum Fertigmachen.
 
 ### Symptom (`symptoms`)
@@ -115,6 +126,35 @@ Gut zu wissen: Zwischen zwei Übungen auf Zeit ohne eigene Pause legt der Timer 
 
 - `topics`: Themen-IDs, **das wichtigste zuerst**. Das erste zählt im Wochenplan dreifach, das zweite doppelt, alle weiteren einfach.
 - Die ersten 10 Symptome sind sofort sichtbar, der Rest hinter „Alle … Probleme zeigen“. Die häufigsten also nach oben.
+
+### Protokoll (`protocols`)
+
+Eine komplette Einheit, jede Runde mit eigener Aufgabe. Erscheint unten auf der Roadmap und bei den verknüpften Themen, öffnet sich mit Timer unter `drill.html#<id>`.
+
+```json
+{
+  "id": "defense-1", "title": "Defense 1: Schichten & Konter", "pillar": "technik",
+  "setup": "Solo · Schattenboxen", "status": "geprueft", "topics": ["defense", "headmovement"],
+  "freq": "1× pro Woche", "work": 180, "rest": 60,
+  "goal": "…", "check": "…",
+  "rounds": [
+    { "text": "Jab frei, Slip in beliebige Richtung, dann Kombination", "cmd": ["Slip"], "pace": "mittel" },
+    { "text": "Freies Schattenboxen", "repeat": 2 }
+  ]
+}
+```
+
+| Feld | Was |
+|---|---|
+| `id` | Einmalig, darf nicht wie ein Thema heißen |
+| `setup` | Kurz: Solo, Partner, Sandsack … |
+| `topics` | Themen-IDs, bei denen das Protokoll angezeigt wird |
+| `work` / `rest` | Rundenzeit und Pause in Sekunden für alle Runden (Standard 180 / 60) |
+| `rounds[].text` | Die Aufgabe der Runde |
+| `rounds[].note` | Optional: Hinweis darunter |
+| `rounds[].repeat` | Optional: Runde mehrfach, z. B. `3` für „Runde 6–8“ |
+| `rounds[].work` / `rest` | Optional: abweichende Zeit nur für diese Runde, z. B. `300` für 5 Minuten |
+| `rounds[].cmd` / `pace` | Optional: Kommandos wie oben |
 
 ---
 
