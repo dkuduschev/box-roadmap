@@ -271,6 +271,7 @@
     $("ptitle").textContent = t.title;
     let b = `<p>${esc(t.desc)}</p>${rateBlock(t)}
       <div class="sec"><h4>Worauf es ankommt</h4><ul class="ticks">${t.keys.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      ${t.variants && t.variants.length ? `<div class="sec"><h4>Varianten</h4><ul class="ticks vars">${t.variants.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
       <div class="sec"><h4>Daran merkst du, dass es fehlt</h4><ul class="ticks signs">${t.signs.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
       <div class="sec"><h4>Drillplan</h4>`;
     if (d) {
@@ -282,6 +283,8 @@
     } else {
       b += `<div class="nodrill">Drillplan folgt.</div>`;
     }
+    const pr = (D.protocols || []).filter((x) => (x.topics || []).includes(t.id));
+    if (pr.length) b += `</div><div class="sec"><h4>Protokolle dazu</h4><div class="plist">${pr.map(protoCard).join("")}</div>`;
     b += `</div><div class="sec"><h4>Video-Ideen</h4><div class="vlist">${t.videos.map((v0) => {
       const v = Core.video(v0.id);
       return `<div class="vitem"><div><div>${esc(v.title)}</div>${v.hook ? `<div class="vhook">„${esc(v.hook)}“</div>` : ""}<span class="fmt" title="${esc(D.formats[v.format] || "")}">${esc(v.format)}</span> <button class="linkish" data-goto="${v.id}">bearbeiten</button></div>${statusBtn(v.id)}</div>`;
@@ -294,6 +297,16 @@
     if (push && location.hash !== "#" + id) location.hash = id;
     if (wasHidden) $("pclose").focus();
     renderMap();
+  }
+  function protoCard(x) {
+    const d = Core.protoDrill(x), cmd = x.rounds.some((r) => r.cmd && r.cmd.length);
+    return `<a class="pcard" href="drill.html#${esc(x.id)}" style="--pc:${pc(x.pillar)}"><b>${esc(x.title)}</b><span>${esc(x.goal || "")}</span><small>${d.rounds} Runden · ${esc(d.dur)}${x.setup ? " · " + esc(x.setup) : ""}${cmd ? " · mit Kommandos" : ""}</small></a>`;
+  }
+  function renderProtos() {
+    const el = $("protos"), L = D.protocols || [];
+    if (!el) return;
+    el.hidden = state.view !== "map" || !L.length;
+    el.innerHTML = `<div class="protos-h"><h2>Protokolle</h2><span class="hint">Komplette Einheiten, Runde für Runde. Mit Timer und Kommandos.</span></div><div class="plist">${L.map(protoCard).join("")}</div>`;
   }
   function closePanel() {
     $("panel").hidden = true; $("scrim").hidden = true;
@@ -310,6 +323,7 @@
     $("v-content").setAttribute("aria-pressed", v === "content");
     $("map").hidden = v !== "map"; $("content").hidden = v !== "content";
     $("legend").hidden = v !== "map";
+    renderProtos();
     if (v === "content") renderContent();
   }
   function renderFinder() { renderWeakest(); renderSymptoms(); renderReco(); }

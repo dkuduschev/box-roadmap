@@ -14,7 +14,7 @@
 
   /* ---------- Inhalte ---------- */
   let data = null;
-  const idx = { topics: {}, pillars: {}, videos: [], videoById: {} };
+  const idx = { topics: {}, pillars: {}, videos: [], videoById: {}, protocols: {} };
 
   async function loadData() {
     const r = await fetch("data/roadmap.json", { cache: "no-cache" });
@@ -29,7 +29,20 @@
         idx.videoById[v.id] = vv;
       });
     });
+    (data.protocols || []).forEach((p) => (idx.protocols[p.id] = p));
     return data;
+  }
+
+  // Protokoll (Runde für Runde) in die Form eines Drillplans bringen, damit Timer und Druck es direkt nutzen
+  function protoDrill(p) {
+    let n = 1, sec = 0;
+    const exercises = p.rounds.map((r) => {
+      const k = r.repeat || 1, work = r.work || p.work || 180, rest = r.rest != null ? r.rest : p.rest != null ? p.rest : 60;
+      const e = { name: r.text, rn: k > 1 ? n + "–" + (n + k - 1) : String(n), rounds: k, work, rest, note: r.note || "", cmd: r.cmd, pace: r.pace, label: r.label || (k > 1 ? k + " × " + fmtDur(work) : fmtDur(work)) };
+      n += k; sec += k * (work + rest);
+      return e;
+    });
+    return { status: p.status || "entwurf", goal: p.goal, freq: p.freq || "nach Bedarf", perWeek: null, dur: p.dur || "ca. " + Math.round((sec - (exercises.at(-1).rest || 0)) / 60) + " Min.", exercises, check: p.check || "", rounds: n - 1 };
   }
 
   /* ---------- Fortschritt ---------- */
@@ -313,7 +326,7 @@
     video, statusOf, setVideo, rating, setRating,
     sync, ghSettings, ghCfg, connect, disconnect, pull, push, merge,
     exportProgress, importProgress, download,
-    fmtDur, exLabel, weekText,
+    fmtDur, exLabel, weekText, protoDrill,
     STATUS: [["idee", "Idee"], ["geplant", "Geplant"], ["gedreht", "Gedreht"], ["online", "Online"]]
   };
 })();

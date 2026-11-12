@@ -37,6 +37,16 @@
 .t-opts .chip{font-size:12px;padding:5px 10px}
 .t-opts .chip[aria-pressed="true"]::before{content:"✓ "}
 .t-tip{font-size:12px;color:var(--muted);text-align:center;margin:0}
+.t-cmd{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,9vw,48px);line-height:1.05;text-align:center;text-transform:uppercase;letter-spacing:.02em;color:var(--phase);min-height:1.1em;padding:6px 8px;border:2px solid var(--phase);border-radius:12px;opacity:.55;transition:opacity .4s,transform .2s}
+.t-cmd.idle{font-family:var(--f-body);font-size:14px;font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted);border-style:dashed;border-color:var(--line);opacity:1}
+.t-cmd.on{opacity:1;transform:scale(1.04);background:var(--surface-2)}
+.t-pace{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;align-items:center}
+.t-pace>span{font-size:12px;font-weight:600;color:var(--muted);margin-right:2px}
+.t-pace .chip{font-size:12px;padding:5px 10px}
+.t-pace .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.t-opts .chip:disabled{opacity:.4}
+.ex .cmds{display:inline-block;margin-top:4px;font-family:var(--f-mono);font-size:12px;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.t-cmd{transition:none}.t-cmd.on{transform:none}}
 
 /* Übungen */
 .exlist{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -60,6 +70,7 @@
   body{background:#fff;font-size:11pt}
   .dwrap{max-width:none;padding:0;gap:10px}
   .dnav,.timer,.dfoot{display:none!important}
+  .ex .cmds{color:#000}
   .dhead h1{font-size:30pt}
   .exlist,.dcheck{border-color:#999;break-inside:avoid}
   .ex{padding:8px 10px;break-inside:avoid;grid-template-columns:28px minmax(0,1fr) auto}
@@ -71,3 +82,4 @@
   .boxes i{width:14px;height:14px;border:1.5px solid #000;border-radius:2px}
   .pfoot{display:flex;justify-content:space-between;font-size:9pt;color:#444;border-top:1px solid #bbb;padding-top:6px}
 }
+.t-pace .chip[aria-pressed="true"]::before{content:none}
